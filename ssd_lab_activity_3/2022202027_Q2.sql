@@ -1,0 +1,2 @@
+USE COMPANY;
+select concat(concat(e1.Fname , " " , e1.Minit)," ", e1.Lname) as Full_Name,  e1.ssn , e1.Dno ,count(*) as p   from EMPLOYEE e1 inner join EMPLOYEE e2 on e1.Ssn=e2.Super_ssn group by e2.Super_ssn order by p;

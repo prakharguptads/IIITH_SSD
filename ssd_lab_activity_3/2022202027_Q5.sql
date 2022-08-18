@@ -1,0 +1,2 @@
+USE COMPANY;
+select mgr_ssn ,Dnumber , count(*) from ( select mgr_ssn ,Dnumber , Dependent_name  from  (select distinct d.mgr_ssn ,d.Dnumber from DEPARTMENT d inner join DEPT_LOCATIONS dl on d.Dnumber=dl.Dnumber where d.Dnumber in (select Dnumber from DEPT_LOCATIONS group by Dnumber having count(Dnumber)>1)) emp inner join DEPENDENT de on de.essn=emp.mgr_ssn) p group by p.mgr_ssn , p.dnumber;
