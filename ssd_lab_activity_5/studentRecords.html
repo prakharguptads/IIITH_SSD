@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <script>
+            var k=1;
+            function getInputValue(){
+                var roll = document.getElementById("myInput").value;
+                var name = document.getElementById("myInput1").value;
+                var table = document.getElementById("table");
+                var new1 = table.insertRow(k);
+                var cell1 = new1.insertCell(0);
+                var cell2 = new1.insertCell(1);
+                cell1.innerHTML = roll;
+                cell2.innerHTML = name;
+                k++;
+            }
+            function deleteentry()
+            {
+                if(k>1)
+                {document.getElementById("table").deleteRow(k-1);
+                k--;}
+            }
+        </script>
+        <title>
+            studentReconds
+        </title>
+        <link rel="stylesheet" href="studentRecords.css">
+    </head>
+    <body>
+        <div>
+        <div id="container">
+            <div>
+            <h1>
+                Students Records
+            </h1>
+            </div>
+            <div id="entry">
+                <div>
+                Roll No : <input id="myInput">
+                Student Name : <input id="myInput1">
+                <button onclick="getInputValue();"><a> Add </a></button>
+                <button id="de" onclick="deleteentry();"><a> Delete </a></button>
+                </div>
+                <div id="welcomeDiv"  style="display:none;" class="answer_list" > WELCOME</div>
+            </div>
+            <div id="show">
+                <table id="table">
+                    <tr>
+                        <th>Roll No. </th>
+                        <th>Name</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,62 @@
+
+body 
+{
+    text-align: center;
+    background-image: linear-gradient(rgb(87, 87, 192), white);
+}
+
+button{
+    margin-left: 5px;
+    border-radius: 5px;
+    
+    background-color: rgb(54, 219, 54);
+}
+input{
+    margin: 2px;
+    padding: 2px;
+    text-align: left;
+}
+#de{
+    background-color: red;
+}
+#show
+{
+    margin-left: 292px;
+    border-collapse: collapse;
+    border: 10px;
+    align-items: center;
+    
+}
+#container
+{
+    text-align: center;
+}
+a {
+    text-decoration: none;
+  }
+#entry
+{
+    margin-left:300px;
+    margin-right:300px;
+    align-items: center;
+    text-align: center;
+    display: flex;
+}
+
+table {
+    border: 1px solid;
+    padding: 10px;
+    align-items: center;
+    border-collapse: collapse;
+    width: 50%;
+}
+  
+th, td {
+    border: 10px;
+    text-align: left;
+    padding: 8px;
+}
+  
+tr:nth-child(even) {
+    background-color: rgb(44, 33, 192);
+}
