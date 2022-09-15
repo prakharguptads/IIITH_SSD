@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <title>
+            Team Form
+        </title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <div>
+            <div id="heading">
+                <h1>Team Form</h1>
+            </div>
+            <div id="box">
+                <div id="insidebox">
+                    <table>
+                    <tr>
+                        <th><b>Manager Name  </b></th>
+                        <th><input type="username" id="mname"></th>
+                    </tr>
+                    <tr>
+                        <th><b>Group Email  </b></th>
+                        <th><input type="email" id="mail" onmousemove="ValidateEmail(mail)"></th>
+                    </tr>
+                    <tr>
+                        <th><b>Server Username  </b></th>
+                        <th><input type="username" id="username"  onmousemove="userValid()"></th>
+                    </tr>
+                    <tr>
+                        <th><b>Password  </b></th>
+                        <th><input type="password" id="Password"></th>
+                    </tr>
+                    <tr>
+                        <th><b>Confirm Password  </b></th>
+                        <th><input type="password" id="ConfirmPassword"></th>
+                    </tr>
+                    
+                    <tr>
+                        <th><label for="lead">Team Lead  </label></th>
+                        <th><select name="lead" id="lead">
+                            <option value="Bruce">Bruce</option>
+                            <option value="Lee">Lee</option>
+                            <option value="Jin">Jin</option>
+                            <option value="Paul">Paul</option>
+                          </select></th>
+                    </tr>
+                    </table>
+                    <table>
+                    <tr>
+                        <th> <b>Team Members  </b></th>
+                        <th id="flex"><div id="MemberBlock">
+                            <div id="list"  class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                <h3 ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="dragtarget">Bruce</h3>
+                                <h3 ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="dragtarget">Lee</h3>
+                                <h3 ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="dragtarget">Jin</h3>
+                                <h3 ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="dragtarget">Paul</h3>
+                            </div>
+                            </th>
+                            <th>
+                            </div>
+                            <div id="MemberBlock">
+                            <div id="list1"  class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)">
+                            </div>
+                            </div>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th><button onclick="ValidateAll()">   Submit   </button></th>
+                        <th></th>
+                    </tr>
+                    </table>
+                    <script src="script.js"></script>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
